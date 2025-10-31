@@ -84,7 +84,7 @@ const Province = () => {
           <Dialog>
             <DialogTrigger>
               <div className=''>
-            <Image src={"/assets/pura-bali.png"} alt='' width={36} height={36} className='fixed z-50 w-14 mt-[449px] ml-[480px] h-auto hover:-translate-y-3 transition-all' />
+            <Image src={"/assets/pura-bali.png"} alt='' width={36} height={36} className='fixed z-50 w-14 mt-[449px] ml-[480px] h-auto hover:cursor-pointer hover:-translate-y-3 transition-all' />
           </div>
             </DialogTrigger>
             <DialogContent>
