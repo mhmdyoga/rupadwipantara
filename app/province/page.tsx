@@ -63,7 +63,7 @@ const Province = () => {
           delay={1.2}
         >
           <div className=''>
-            <Image src={"/assets/ondel-ondel.png"} alt='' width={36} height={36} className='fixed w-12 mt-[395px] ml-56 h-auto hover:-translate-y-3 transition-all' />
+            <Image src={"/assets/ondel-ondel.png"} alt='' width={36} height={36} className='fixed w-12 mt-[425px] ml-56 h-auto hover:-translate-y-3 transition-all' />
           </div>
         </AnimatedContent>
 
