@@ -1,8 +1,9 @@
+"use client"
 import AnimatedContent from '@/components/AnimatedContent';
 import TextType from '@/components/TextType';
 import { Kanit } from 'next/font/google';
 import Image from 'next/image'
-import React from 'react';
+import { motion } from 'framer-motion';
 import {
   Dialog,
   DialogContent,
@@ -44,9 +45,18 @@ const Province = () => {
           threshold={0.2}
           delay={1.4}
         >
-          <div className=''>
-            <Image src={"/assets/loc-province.png"} alt='' width={36} height={36} className='fixed w-6 mt-32 h-auto hover:-translate-y-3 transition-all' />
-          </div>
+          <motion.div
+            animate={{
+              y: [0, -10, 0], // naik lalu turun
+            }}
+            transition={{
+              duration: 3,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+            className=''>
+            <Image src={"/assets/bolon.png"} alt='' width={36} height={36} className='fixed w-12 mt-36 -ml-4 h-auto hover:-translate-y-3 transition-all' />
+          </motion.div>
         </AnimatedContent>
 
 
@@ -62,9 +72,16 @@ const Province = () => {
           threshold={0.2}
           delay={1.2}
         >
-          <div className=''>
+          <motion.div 
+          animate={{ y: [0, -10, 0] }}
+                transition={{
+                  duration: 3,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+          className=''>
             <Image src={"/assets/ondel-ondel.png"} alt='' width={36} height={36} className='fixed w-12 mt-[425px] ml-56 h-auto hover:-translate-y-3 transition-all' />
-          </div>
+          </motion.div>
         </AnimatedContent>
 
 
@@ -80,18 +97,36 @@ const Province = () => {
           threshold={0.2}
           delay={1}
         >
-          
           <Dialog>
             <DialogTrigger>
-              <div className=''>
-            <Image src={"/assets/pura-bali.png"} alt='' width={36} height={36} className='fixed z-50 w-14 mt-[449px] ml-[480px] h-auto hover:cursor-pointer hover:-translate-y-3 transition-all' />
-          </div>
+              {/* motion.div jadi yang fixed */}
+              <motion.div
+                animate={{ y: [0, -10, 0] }}
+                transition={{
+                  duration: 3,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+                className="fixed z-50 mt-[449px] ml-[480px] w-14 hover:cursor-pointer"
+              >
+                <Image
+                  src="/assets/pura-bali.png"
+                  alt=""
+                  width={56}
+                  height={56}
+                  className="w-14 h-auto transition-all hover:-translate-y-3"
+                />
+              </motion.div>
             </DialogTrigger>
+
             <DialogContent>
               <DialogHeader>
                 <DialogTitle>Penjelasan mengenai Provinsi Bali</DialogTitle>
                 <DialogDescription>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem consectetur a quia neque dignissimos labore voluptates incidunt, earum aspernatur perferendis, totam commodi maxime natus delectus aliquam, possimus molestiae officia doloremque.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem
+                  consectetur a quia neque dignissimos labore voluptates incidunt, earum
+                  aspernatur perferendis, totam commodi maxime natus delectus aliquam,
+                  possimus molestiae officia doloremque.
                 </DialogDescription>
               </DialogHeader>
             </DialogContent>
