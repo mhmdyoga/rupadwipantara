@@ -12,6 +12,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import Character from '@/components/Character';
 
 const Kanit_ = Kanit({
   subsets: ["thai"],
@@ -128,6 +129,9 @@ const Province = () => {
                   aspernatur perferendis, totam commodi maxime natus delectus aliquam,
                   possimus molestiae officia doloremque.
                 </DialogDescription>
+                {/* character */}
+                <Character/>
+                
               </DialogHeader>
             </DialogContent>
           </Dialog>
