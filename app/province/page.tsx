@@ -195,7 +195,7 @@ const Province = () => {
           pauseDuration={1500}
           showCursor={true}
           cursorCharacter="|"
-          className={`font-extrabold text-white md:text-9xl text-7xl md:-ml-[750px] -ml-1 md:-mt-10 -mt-32 ${Kanit_.className}`}
+          className={`font-extrabold text-white md:text-9xl text-7xl md:-ml-[750px] -ml-1 md:-mt-10 -mt-40 ${Kanit_.className}`}
         />
       </div>
     </div>

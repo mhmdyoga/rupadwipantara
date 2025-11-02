@@ -149,7 +149,7 @@ const SplashScreen = () => {
                     delay={1.2}
 
                 >
-                    <h1 className="font-extrabold text-5xl md:text-7xl lg:text-8xl -mt-48 leading-tight drop-shadow-md tracking-wide">
+                    <h1 className="font-extrabold text-4xl md:text-7xl lg:text-8xl -mt-48 leading-tight drop-shadow-md tracking-wide">
                         MENGENAL BUDAYA
                     </h1>
                     <h2 className="font-script text-4xl md:text-6xl italic mt-2 drop-shadow-md">
@@ -160,12 +160,12 @@ const SplashScreen = () => {
 
                 {/* Subjudul */}
                 <TextType
-                    text={["Kekayaan Kebudayaan indonesia yang menyebar di seluruh nusantara"]}
+                    text={["Kekayaan Kebudayaan indonesia yang menyebar di seluruh nusantara."]}
                     typingSpeed={75}
                     pauseDuration={1500}
                     showCursor={true}
                     cursorCharacter="|"
-                    className="text-white font-bold text-2xl w-[450px] mt-10"
+                    className="text-white font-bold text-xl md:text-2xl md:w-[450px] w-[350px] md:mt-10 -mt-10"
                 />
 
                 {/* Ilustrasi Karakter */}
