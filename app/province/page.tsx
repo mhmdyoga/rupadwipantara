@@ -26,7 +26,7 @@ const Kanit_ = Kanit({
 
 const Province = () => {
   return (
-    <div className='relative flex flex-col items-center justify-center w-full h-screen bg-[#76250E] overflow-hidden text-white'>
+    <div className='relative flex md:flex-col flex-col-reverse items-center justify-center w-full h-screen bg-[#76250E] overflow-hidden text-white'>
       {/* peta indonesia */}
       <div className=''>
         {/* mata angin */}
@@ -56,7 +56,7 @@ const Province = () => {
               ease: "easeInOut",
             }}
             className=''>
-            <Image src={"/assets/bolon.png"} alt='' width={36} height={36} className='fixed w-12 mt-36 -ml-4 h-auto hover:-translate-y-3 transition-all' />
+            <Image src={"/assets/bolon.png"} alt='' width={36} height={36} className='fixed md:w-12 w-6 md:mt-36 mt-18 md:-ml-4 -ml-2 h-auto hover:-translate-y-3 transition-all' />
           </motion.div>
         </AnimatedContent>
 
@@ -73,15 +73,15 @@ const Province = () => {
           threshold={0.2}
           delay={1.2}
         >
-          <motion.div 
-          animate={{ y: [0, -10, 0] }}
-                transition={{
-                  duration: 3,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-          className=''>
-            <Image src={"/assets/ondel-ondel.png"} alt='' width={36} height={36} className='fixed w-12 mt-[425px] ml-56 h-auto hover:-translate-y-3 transition-all' />
+          <motion.div
+            animate={{ y: [0, -10, 0] }}
+            transition={{
+              duration: 3,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+            className=''>
+            <Image src={"/assets/ondel-ondel.png"} alt='' width={36} height={36} className='fixed md:w-12 w-6 md:mt-[425px] mt-[162px] md:ml-56 ml-14 h-auto hover:-translate-y-3 transition-all' />
           </motion.div>
         </AnimatedContent>
 
@@ -108,7 +108,7 @@ const Province = () => {
                   repeat: Infinity,
                   ease: "easeInOut",
                 }}
-                className="fixed z-50 mt-[449px] ml-[480px] w-14 hover:cursor-pointer"
+                className="fixed z-50 md:mt-[449px] mt-[154px] md:ml-[480px] ml-[134px] md:w-14 w-8 hover:cursor-pointer"
               >
                 <Image
                   src="/assets/pura-bali.png"
@@ -130,8 +130,8 @@ const Province = () => {
                   possimus molestiae officia doloremque.
                 </DialogDescription>
                 {/* character */}
-                <Character/>
-                
+                <Character />
+
               </DialogHeader>
             </DialogContent>
           </Dialog>
@@ -151,7 +151,7 @@ const Province = () => {
           delay={1.6}
         >
           <div className=''>
-            <Image src={"/assets/loc-province.png"} alt='' width={36} height={36} className='fixed z-50 w-6 mt-[309px] ml-[400px] h-auto hover:-translate-y-3 transition-all' />
+            <Image src={"/assets/loc-province.png"} alt='' width={36} height={36} className='fixed z-50 md:w-6 w-3 md:mt-[309px] mt-[95px] md:ml-[400px] ml-[120px] h-auto hover:-translate-y-3 transition-all' />
           </div>
         </AnimatedContent>
 
@@ -169,19 +169,20 @@ const Province = () => {
           delay={1.8}
         >
           <div className=''>
-            <Image src={"/assets/loc-province.png"} alt='' width={36} height={36} className='fixed z-100 w-6 mt-[379px] ml-[650px] h-auto hover:-translate-y-3 transition-all' />
+            <Image src={"/assets/loc-province.png"} alt='' width={36} height={36} className='fixed z-100 md:w-6 w-3 md:mt-[379px] mt-[129px] md:ml-[650px] ml-[188px] h-auto hover:-translate-y-3 transition-all' />
           </div>
         </AnimatedContent>
 
 
 
-        <Image src="/assets/peta-indoesia-2.png" alt="" width={800} height={800} className='w-[1222px] h-[648px]' />
+        <Image src="/assets/peta-indoesia-2.png" alt="" width={800} height={800} className='md:w-[1222px] md:h-[648px] w-[521px] h-[228px]' />
 
       </div>
+
       {/* title */}
-      <div className='flex flex-col gap-2'>
+      <div className='flex flex-col gap-2 '>
         {/* icon province */}
-        <div className='flex flex-row gap-3 items-center'>
+        <div className='md:flex md:flex-row md:gap-3 md:items-center hidden'>
 
           <Image src="/assets/loc-province.png" alt='' width={36} height={36} className='w-6 h-auto -mt-32 -ml-[750px] fixed ' />
 
@@ -194,7 +195,7 @@ const Province = () => {
           pauseDuration={1500}
           showCursor={true}
           cursorCharacter="|"
-          className={`font-extrabold text-white text-9xl -ml-[750px] -mt-10 ${Kanit_.className}`}
+          className={`font-extrabold text-white md:text-9xl text-7xl md:-ml-[750px] -ml-1 md:-mt-10 -mt-32 ${Kanit_.className}`}
         />
       </div>
     </div>
