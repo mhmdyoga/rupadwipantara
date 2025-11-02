@@ -150,9 +150,16 @@ const Province = () => {
           threshold={0.2}
           delay={1.6}
         >
-          <div className=''>
-            <Image src={"/assets/loc-province.png"} alt='' width={36} height={36} className='fixed z-50 md:w-6 w-3 md:mt-[309px] mt-[95px] md:ml-[400px] ml-[120px] h-auto hover:-translate-y-3 transition-all' />
-          </div>
+          <motion.div
+            animate={{ y: [0, -10, 0] }}
+            transition={{
+              duration: 3,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          >
+            <Image src={"/assets/betang-dayak.png"} alt='' width={36} height={36} className='fixed z-50 md:w-14 w-7 md:mt-[309px] mt-[95px] md:ml-[400px] ml-[120px] h-auto hover:-translate-y-3 transition-all' />
+          </motion.div>
         </AnimatedContent>
 
 
@@ -168,9 +175,16 @@ const Province = () => {
           threshold={0.2}
           delay={1.8}
         >
-          <div className=''>
-            <Image src={"/assets/loc-province.png"} alt='' width={36} height={36} className='fixed z-100 md:w-6 w-3 md:mt-[379px] mt-[129px] md:ml-[650px] ml-[203px] h-auto hover:-translate-y-3 transition-all' />
-          </div>
+          <motion.div
+            animate={{ y: [0, -10, 0] }}
+            transition={{
+              duration: 3,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          >
+            <Image src={"/assets/tongkang.png"} alt='' width={36} height={36} className='fixed z-100 md:w-12 w-6 md:mt-[359px] mt-[119px] md:ml-[640px] ml-[199px] h-auto hover:-translate-y-3 transition-all' />
+          </motion.div>
         </AnimatedContent>
 
 
