@@ -81,7 +81,7 @@ const Province = () => {
               ease: "easeInOut",
             }}
             className=''>
-            <Image src={"/assets/ondel-ondel.png"} alt='' width={36} height={36} className='fixed md:w-12 w-6 md:mt-[425px] mt-[162px] md:ml-56 ml-14 h-auto hover:-translate-y-3 transition-all' />
+            <Image src={"/assets/ondel-ondel.png"} alt='' width={36} height={36} className='fixed md:w-12 w-6 md:mt-[425px] mt-[162px] md:ml-56 ml-18 h-auto hover:-translate-y-3 transition-all' />
           </motion.div>
         </AnimatedContent>
 
@@ -108,7 +108,7 @@ const Province = () => {
                   repeat: Infinity,
                   ease: "easeInOut",
                 }}
-                className="fixed z-50 md:mt-[449px] mt-[154px] md:ml-[480px] ml-[134px] md:w-14 w-8 hover:cursor-pointer"
+                className="fixed z-50 md:mt-[449px] mt-[154px] md:ml-[480px] ml-[146px] md:w-14 w-8 hover:cursor-pointer"
               >
                 <Image
                   src="/assets/pura-bali.png"
@@ -169,7 +169,7 @@ const Province = () => {
           delay={1.8}
         >
           <div className=''>
-            <Image src={"/assets/loc-province.png"} alt='' width={36} height={36} className='fixed z-100 md:w-6 w-3 md:mt-[379px] mt-[129px] md:ml-[650px] ml-[188px] h-auto hover:-translate-y-3 transition-all' />
+            <Image src={"/assets/loc-province.png"} alt='' width={36} height={36} className='fixed z-100 md:w-6 w-3 md:mt-[379px] mt-[129px] md:ml-[650px] ml-[203px] h-auto hover:-translate-y-3 transition-all' />
           </div>
         </AnimatedContent>
 
