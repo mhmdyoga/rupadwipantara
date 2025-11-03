@@ -35,7 +35,7 @@ const Introduction = () => {
                         animateOpacity
                         scale={1.1}
                         threshold={0.2}
-                        delay={37}
+                        delay={30}
                     >
                         <Button variant={"link"} onClick={() => router.push('/province')} className='cursor-pointer ml-[1250px]'>Jelajahi Peta <ExternalLink /></Button>
                     </AnimatedContent>
