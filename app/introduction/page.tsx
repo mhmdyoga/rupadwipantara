@@ -21,7 +21,7 @@ const Introduction = () => {
                     <AnimatedContent
                         distance={150}
                         direction="vertical"
-                        reverse={true}
+                        reverse={false}
                         duration={1.2}
                         initialOpacity={0}
                         animateOpacity
