@@ -29,10 +29,18 @@ const Introduction = () => {
                         threshold={0.2}
                         delay={0.1}
                     >
-                        <h2 className='w-96 text-gray-900 font-semibold'>Indonesia dikenal sebagai negeri yang kaya akan kebudayaan, di mana setiap provinsi memiliki keunikan dan warisan tradisi yang berbeda-beda. Melalui lomba ini, kami mengajak generasi muda untuk mengenal, mencintai, dan melestarikan budaya bangsa melalui kreativitas digital. Dari rumah adat, tarian, musik, hingga kearifan lokal, semua menjadi bagian dari identitas yang patut dijaga dan diperkenalkan ke dunia. Mari bersama menumbuhkan semangat kebanggaan terhadap keberagaman budaya Indonesia, sekaligus memperkuat rasa persatuan dalam perbedaan. Inilah saatnya budaya Indonesia bersinar melalui inovasi dan karya generasi penerus bangsa.</h2>
-
-                        <Button variant={"link"} onClick={() => router.push('/province')} className='cursor-pointer'>Jelajahi Peta <ExternalLink /></Button>
+                        <div className=''>
+                            <TextType
+                                text={["Taukah kamu? Di Indonesia, budaya yang tersebar di seluruh Nusantara mencakup ribuan warisan budaya takbenda dan ratusan suku bangsa — mari kita lihat beberapa angkanya!"]}
+                                typingSpeed={75}
+                                pauseDuration={1500}
+                                showCursor={true}
+                                cursorCharacter="|"
+                                className={`font-extrabold w-[450px] text-black md:text-xl text-sm md:-ml-[350px] -ml-1 md:-mt-28 -mt-40 bg-black/30 backdrop-blur-md border border-white/10 rounded-xl shadow-lg p-6  max-w-md`}
+                            />
+                        </div>
                     </AnimatedContent>
+                    <Button variant={"link"} onClick={() => router.push('/province')} className='cursor-pointer'>Jelajahi Peta <ExternalLink /></Button>
 
                 </div>
             </div>

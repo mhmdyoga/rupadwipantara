@@ -1,9 +1,16 @@
+"use client";
 import Image from "next/image";
 import React from "react";
 import AnimatedContent from "../AnimatedContent";
 import TextType from "../TextType";
+import { Button } from "../ui/button";
+import { ArrowBigLeft, EarthIcon, Router } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 const SplashScreen = () => {
+
+
+    const router = useRouter();
     return (
         <div className="relative flex flex-col items-center justify-center w-full h-screen bg-[#76250E] overflow-hidden text-white">
 
@@ -117,7 +124,7 @@ const SplashScreen = () => {
                     threshold={0.1}
                     delay={0.8}
                 >
-                    <Image src="/assets/cloud-ilustrasi.png" alt="" width={320} height={320} className="w-20 h-auto ml-[650px] mt-20 translate-x-32 rotate-y-180" />
+                    <Image src="/assets/cloud-ilustrasi.png" alt="" width={320} height={320} className="w-20 h-auto ml-[650px] mt-40 translate-x-32 rotate-y-180" />
                 </AnimatedContent>
                 <AnimatedContent
                     distance={100}
@@ -147,26 +154,22 @@ const SplashScreen = () => {
                     scale={1}
                     threshold={0.1}
                     delay={1.2}
-
                 >
-                    <h1 className="font-extrabold text-4xl md:text-7xl lg:text-8xl -mt-48 leading-tight drop-shadow-md tracking-wide">
-                        MENGENAL BUDAYA
-                    </h1>
-                    <h2 className="font-script text-4xl md:text-6xl italic mt-2 drop-shadow-md">
-                        Indonesia
-                    </h2>
+                    <div className="flex flex-col -mt-48">
+                        <h1 className="font-extrabold text-4xl md:text-7xl lg:text-8xl">
+                            SELAMAT DATANG
+                        </h1>
+                        <h2 className="font-extrabold text-3xl md:text-6xl lg:text-7xl">
+                            DI
+                        </h2>
+                        <h2 className="font-extrabold text-3xl md:text-6xl lg:text-7xl">
+                            LOKARUPA
+                        </h2>           
+                        <Button variant={"outline"}  onClick={() => router.push('/introduction')} className="text-black w-32 font-bold cursor-pointer text-sm flex flex-row-reverse gap-2 items-center justify-center md:ml-96 ml-24 mt-8">Yok jelajahi <EarthIcon/></Button>
+                    </div>
+
                 </AnimatedContent>
 
-
-                {/* Subjudul */}
-                <TextType
-                    text={["Kekayaan Kebudayaan indonesia yang menyebar di seluruh nusantara."]}
-                    typingSpeed={75}
-                    pauseDuration={1500}
-                    showCursor={true}
-                    cursorCharacter="|"
-                    className="text-white font-bold text-xl md:text-2xl md:w-[450px] w-[350px] md:mt-10 -mt-10"
-                />
 
                 {/* Ilustrasi Karakter */}
                 <AnimatedContent
