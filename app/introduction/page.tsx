@@ -1,5 +1,6 @@
 "use client";
 import AnimatedContent from '@/components/AnimatedContent';
+import AudioManager from '@/components/AudioManager';
 import Character from '@/components/Character'
 import TextType from '@/components/TextType';
 import { Button } from '@/components/ui/button'
@@ -30,13 +31,14 @@ const Introduction = () => {
                         delay={0.1}
                     >
                         <div className=''>
+                            <AudioManager src="/assets/introduction_audio.mp3"/>
                             <TextType
                                 text={["Taukah kamu? Di Indonesia, budaya yang tersebar di seluruh Nusantara mencakup ribuan warisan budaya takbenda dan ratusan suku bangsa — mari kita lihat beberapa angkanya!"]}
                                 typingSpeed={75}
                                 pauseDuration={1500}
                                 showCursor={true}
                                 cursorCharacter="|"
-                                className={`font-extrabold w-[450px] text-black md:text-xl text-sm md:-ml-[350px] -ml-1 md:-mt-28 -mt-40 bg-black/30 backdrop-blur-md border border-white/10 rounded-xl shadow-lg p-6  max-w-md`}
+                                className={`font-extrabold w-[450px] text-black md:text-xl text-sm md:-ml-[350px] -ml-[200px] md:-mt-28 -mt-40 bg-black/30 backdrop-blur-md border border-white/10 rounded-xl shadow-lg p-6  max-w-md`}
                             />
                         </div>
                     </AnimatedContent>
