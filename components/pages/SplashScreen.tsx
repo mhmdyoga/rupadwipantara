@@ -155,7 +155,7 @@ const SplashScreen = () => {
                     threshold={0.1}
                     delay={1.2}
                 >
-                    <div className="flex flex-col -mt-48">
+                    <div className="flex flex-col -mt-60">
                         <h1 className="font-extrabold text-4xl md:text-7xl lg:text-8xl">
                             SELAMAT DATANG
                         </h1>
@@ -164,7 +164,8 @@ const SplashScreen = () => {
                         </h2>
                         <h2 className="font-extrabold text-3xl md:text-6xl lg:text-7xl">
                             LOKARUPA
-                        </h2>           
+                        </h2>
+                        <span className="font-bold text-sm md:text-xl lg:text-2xl w-80 md:w-full"> gerbang yang akan membawa menyelami sejarah budaya Indonesia</span>           
                         <Button variant={"outline"}  onClick={() => router.push('/introduction')} className="text-black w-32 font-bold cursor-pointer text-sm flex flex-row-reverse gap-2 items-center justify-center md:ml-96 ml-24 mt-8">Yok jelajahi <EarthIcon/></Button>
                     </div>
 

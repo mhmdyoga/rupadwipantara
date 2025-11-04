@@ -6,7 +6,6 @@ import TextType from '@/components/TextType';
 import { Button } from '@/components/ui/button'
 import { ExternalLink, Link, Link2Icon } from 'lucide-react'
 import { useRouter } from 'next/navigation'
-import React from 'react'
 
 const Introduction = () => {
 
@@ -33,8 +32,8 @@ const Introduction = () => {
                         <div className=''>
                             <AudioManager src="/assets/introduction_audio.mp3"/>
                             <TextType
-                                text={["Taukah kamu? Di Indonesia, budaya yang tersebar di seluruh Nusantara mencakup ribuan warisan budaya takbenda dan ratusan suku bangsa — mari kita lihat beberapa angkanya!"]}
-                                typingSpeed={75}
+                                text={["Indonesia terdiri dari ratusan warisan budaya yang tersebar diseluruh pulau dan harus kita lestarikan."]}
+                                typingSpeed={25}
                                 pauseDuration={1500}
                                 showCursor={true}
                                 cursorCharacter="|"

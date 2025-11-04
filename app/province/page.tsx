@@ -13,6 +13,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import Character from '@/components/Character';
+import AudioManager from '@/components/AudioManager';
 
 const Kanit_ = Kanit({
   subsets: ["thai"],
@@ -124,6 +125,8 @@ const Province = () => {
               <DialogHeader>
                 <DialogTitle>Penjelasan mengenai Provinsi Bali</DialogTitle>
                 <DialogDescription>
+                                              <AudioManager src="/assets/introduction_audio.mp3"/>
+                  
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem
                   consectetur a quia neque dignissimos labore voluptates incidunt, earum
                   aspernatur perferendis, totam commodi maxime natus delectus aliquam,
