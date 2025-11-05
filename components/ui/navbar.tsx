@@ -1,9 +1,16 @@
+"use client";
+import { ChevronsLeft } from 'lucide-react'
+import { useRouter } from 'next/navigation'
 import React from 'react'
 
 const Navbar = () => {
+
+  const router = useRouter();
   return (
-    <div>
-        
+    <div className='p-4'>
+      <div className='bg-[#76250E] fixed rounded-full w-16 h-16 items-center justify-center flex'>
+        <ChevronsLeft onClick={() => router.back()} className='text-white text-4xl font-bold cursor-pointer'/>
+      </div>
     </div>
   )
 }
