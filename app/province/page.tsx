@@ -14,6 +14,9 @@ import {
 } from "@/components/ui/dialog";
 import Character from '@/components/Character';
 import AudioManager from '@/components/AudioManager';
+import { useEffect, useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { Earth } from 'lucide-react';
 
 const Kanit_ = Kanit({
   subsets: ["thai"],
@@ -26,8 +29,17 @@ const Kanit_ = Kanit({
 })
 
 const Province = () => {
+   const [isReady, setIsReady] = useState(false);
+
+   useEffect(() => {
+     const timer = setTimeout(() => {
+       setIsReady(true)
+     }, 1000);
+   }, [])
+   
+
   return (
-    <div className='relative flex md:flex-col flex-col-reverse items-center justify-center w-full h-screen bg-[#76250E] overflow-hidden text-white'>
+    <div className='fixed top-0 left-0 flex md:flex-col flex-col-reverse items-center justify-center w-full h-screen bg-[#76250E] overflow-hidden text-white z-0'>
       {/* peta indonesia */}
       <div className=''>
         {/* mata angin */}
@@ -62,7 +74,7 @@ const Province = () => {
         </AnimatedContent>
 
 
-        {/* jawa */}
+        {/* banten-jakarta (ondel-ondel) */}
         <AnimatedContent
           distance={150}
           direction="vertical"
@@ -82,7 +94,49 @@ const Province = () => {
               ease: "easeInOut",
             }}
             className=''>
-            <Image src={"/assets/ondel-ondel.png"} alt='' width={36} height={36} className='fixed md:w-12 w-6 md:mt-[425px] mt-[162px] md:ml-56 ml-18 h-auto hover:-translate-y-3 transition-all' />
+            <Image src={"/assets/ondel-ondel.png"} alt='' width={36} height={36} className='fixed cursor-pointer md:w-9 w-6 md:mt-[425px] mt-[162px] md:ml-60 ml-20 h-auto hover:-translate-y-3 transition-all' />
+          </motion.div>
+        </AnimatedContent>
+
+        {/* banten */}
+        <AnimatedContent
+          distance={150}
+          direction="vertical"
+          reverse={true}
+          duration={1.2}
+          initialOpacity={0}
+          animateOpacity
+          scale={1.1}
+          threshold={0.2}
+          delay={1.2}
+        >
+          <motion.div
+            animate={{ y: [0, -10, 0] }}
+            transition={{
+              duration: 3,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+            >
+              <Dialog>
+            <DialogTrigger>
+            <Image src={"/assets/rumah-leuit.png"} alt='' width={36} height={36} className='fixed cursor-pointer md:w-9 w-6 md:mt-[435px] mt-[162px] md:ml-56 ml-18 h-auto hover:-translate-y-3 transition-all' />
+            </DialogTrigger>
+            <DialogContent>
+              <DialogHeader>
+                <DialogTitle className='text-center'>Baduy</DialogTitle>
+                <DialogDescription className='text-center italic text-2xl'>
+                 Gunung Ulah dilebur, Lebak ulah dirusak
+                </DialogDescription>
+              </DialogHeader>
+              {isReady && <AudioManager src="/audio/pembuka_baduy.mp3"/>}
+              <div className='flex flex-row gap-4 items-center'>
+                <Image src={"/assets/MYCA.png"} alt='' width={200} height={350} className='w-auto h-[150px]'/>
+                 <h2 className='w-96 text-black font-semibold'>Baduy merupakan salah satu suku di pedalaman Banten, yang jauh dari modernitas dan teguh menjaga tradisi leluhur.</h2>
+              </div>
+              <Button variant={"default"} className='flex flex-row gap-2 item-center w-60 ml-52'> <Earth/> Yok Jelajahi</Button>
+            </DialogContent>
+          </Dialog>
           </motion.div>
         </AnimatedContent>
 

@@ -8,7 +8,7 @@ const Navbar = () => {
   const router = useRouter();
   return (
     <div className='p-4'>
-      <div className='bg-[#76250E] fixed rounded-full w-16 h-16 items-center justify-center flex'>
+      <div className='bg-[#76250E] fixed z-50 rounded-full w-16 h-16 items-center justify-center flex'>
         <ChevronsLeft onClick={() => router.back()} className='text-white text-4xl font-bold cursor-pointer'/>
       </div>
     </div>

@@ -4,6 +4,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { usePathname } from "next/navigation";
 import Navbar from "@/components/ui/navbar";
+import GlobalAudio from "@/components/GlobalAudio";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,6 +30,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <GlobalAudio src="/audio/AUDIO_NUSANTARA.mp3"/>
         {pathName !== path ? (
            <Navbar/>
         ): null}
