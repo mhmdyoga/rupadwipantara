@@ -185,7 +185,7 @@ const SplashScreen = () => {
                     LOKARUPA
                   </h2>
                   <span className="font-bold text-sm md:text-xl lg:text-2xl w-80 md:w-full">
-                    gerbang yang akan membawa menyelami sejarah budaya Indonesia
+                    gerbang yang akan membawa kalian menyelami sejarah budaya Indonesia
                   </span>
                   <Button
                     variant={"outline"}

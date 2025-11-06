@@ -29,14 +29,14 @@ const Kanit_ = Kanit({
 })
 
 const Province = () => {
-   const [isReady, setIsReady] = useState(false);
+  const [isReady, setIsReady] = useState(false);
 
-   useEffect(() => {
-     const timer = setTimeout(() => {
-       setIsReady(true)
-     }, 1000);
-   }, [])
-   
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsReady(true)
+    }, 9200);
+  }, [])
+
 
   return (
     <div className='fixed top-0 left-0 flex md:flex-col flex-col-reverse items-center justify-center w-full h-screen bg-[#76250E] overflow-hidden text-white z-0'>
@@ -94,7 +94,7 @@ const Province = () => {
               ease: "easeInOut",
             }}
             className=''>
-            <Image src={"/assets/ondel-ondel.png"} alt='' width={36} height={36} className='fixed cursor-pointer md:w-9 w-6 md:mt-[425px] mt-[162px] md:ml-60 ml-20 h-auto hover:-translate-y-3 transition-all' />
+            <Image src={"/assets/ondel-ondel.png"} alt='' width={36} height={36} className='fixed cursor-pointer md:w-9 w-6 md:mt-[450px] mt-[162px] md:ml-[255px] ml-20 h-auto hover:-translate-y-3 transition-all' />
           </motion.div>
         </AnimatedContent>
 
@@ -117,26 +117,33 @@ const Province = () => {
               repeat: Infinity,
               ease: "easeInOut",
             }}
-            >
-              <Dialog>
-            <DialogTrigger>
-            <Image src={"/assets/rumah-leuit.png"} alt='' width={36} height={36} className='fixed cursor-pointer md:w-9 w-6 md:mt-[435px] mt-[162px] md:ml-56 ml-18 h-auto hover:-translate-y-3 transition-all' />
-            </DialogTrigger>
-            <DialogContent>
-              <DialogHeader>
-                <DialogTitle className='text-center'>Baduy</DialogTitle>
-                <DialogDescription className='text-center italic text-2xl'>
-                 Gunung Ulah dilebur, Lebak ulah dirusak
-                </DialogDescription>
-              </DialogHeader>
-              {isReady && <AudioManager src="/audio/pembuka_baduy.mp3"/>}
-              <div className='flex flex-row gap-4 items-center'>
-                <Image src={"/assets/MYCA.png"} alt='' width={200} height={350} className='w-auto h-[150px]'/>
-                 <h2 className='w-96 text-black font-semibold'>Baduy merupakan salah satu suku di pedalaman Banten, yang jauh dari modernitas dan teguh menjaga tradisi leluhur.</h2>
-              </div>
-              <Button variant={"default"} className='flex flex-row gap-2 item-center w-60 ml-52'> <Earth/> Yok Jelajahi</Button>
-            </DialogContent>
-          </Dialog>
+          >
+            <Dialog>
+              <DialogTrigger>
+                <Image src={"/assets/rumah-leuit.png"} alt='' width={36} height={36} className='fixed cursor-pointer md:w-9 w-6 md:mt-[435px] mt-[162px] md:ml-56 ml-18 h-auto hover:-translate-y-3 transition-all' />
+              </DialogTrigger>
+              <DialogContent>
+                <DialogHeader>
+                  <DialogTitle className='md:text-center text-left md:text-xl text-sm'>Baduy</DialogTitle>
+                  <DialogDescription className='md:text-center text-left italic md:text-2xl text-lg'>
+                    Gunung Ulah dilebur, Lebak ulah dirusak
+                  </DialogDescription>
+                </DialogHeader>
+                {isReady && <AudioManager src="/audio/pembuka_baduy.mp3" />}
+                <div className='flex md:flex-row flex-col md:gap-4 gap-2 items-center'>
+                  <Image src={"/assets/MYCA.png"} alt='' width={200} height={350} className='w-auto h-[150px]' />
+                  <TextType
+                    text={["Baduy merupakan salah satu suku di pedalaman Banten, yang jauh dari modernitas dan teguh menjaga tradisi leluhur."]}
+                    typingSpeed={45}
+                    pauseDuration={1500}
+                    showCursor={true}
+                    cursorCharacter="|"
+                    className={`md:w-96 w-80 text-black font-semibold text-sm md:text-lg ${Kanit_.className}`}
+                  />
+                </div>
+                <Button onClick={() => window.location.href = "/province/banten/baduy"} variant={"default"} className='flex flex-row gap-2 item-center w-60 md:ml-52 -ml-1'> <Earth /> Yok Jelajahi</Button>
+              </DialogContent>
+            </Dialog>
           </motion.div>
         </AnimatedContent>
 
@@ -179,8 +186,6 @@ const Province = () => {
               <DialogHeader>
                 <DialogTitle>Penjelasan mengenai Provinsi Bali</DialogTitle>
                 <DialogDescription>
-                                              <AudioManager src="/assets/introduction_audio.mp3"/>
-                  
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem
                   consectetur a quia neque dignissimos labore voluptates incidunt, earum
                   aspernatur perferendis, totam commodi maxime natus delectus aliquam,
@@ -266,7 +271,7 @@ const Province = () => {
           pauseDuration={1500}
           showCursor={true}
           cursorCharacter="|"
-          className={`font-extrabold text-white md:text-9xl text-7xl md:-ml-[750px] -ml-1 md:-mt-10 -mt-40 ${Kanit_.className}`}
+          className={`font-extrabold text-white md:text-9xl text-7xl md:-ml-[750px] -ml-1 md:-mt-10 -mt-32 ${Kanit_.className}`}
         />
       </div>
     </div>

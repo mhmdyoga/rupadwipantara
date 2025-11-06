@@ -26,7 +26,7 @@ export default function RootLayout({
   const pathName = usePathname();
   return (
     <html lang="en">
-      <title>Rupadwipantara.</title>
+      <title>Loka Rupa.</title>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
