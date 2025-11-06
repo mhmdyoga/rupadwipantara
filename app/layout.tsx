@@ -1,10 +1,7 @@
-"use client";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { usePathname } from "next/navigation";
-import Navbar from "@/components/ui/navbar";
-import GlobalAudio from "@/components/GlobalAudio";
+import ClientLayout from "@/components/ClientLayout";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,25 +13,26 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+export const metadata: Metadata = {
+  title: "Loka Rupa.",
+  icons: {
+    icon: "/lokarupa.png?v=2",
+  },
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
-  const path = "/";
-  const pathName = usePathname();
   return (
-    <html lang="en">
-      <title>Loka Rupa.</title>
+    <html lang="id">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <GlobalAudio src="/audio/AUDIO_NUSANTARA.mp3"/>
-        {pathName !== path ? (
-           <Navbar/>
-        ): null}
-        {children}
+        <ClientLayout>
+          {children}
+        </ClientLayout>
       </body>
     </html>
   );
