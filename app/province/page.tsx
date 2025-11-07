@@ -34,7 +34,7 @@ const Province = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsReady(true)
-    }, 10200);
+    }, 10000);
   }, [])
 
 
