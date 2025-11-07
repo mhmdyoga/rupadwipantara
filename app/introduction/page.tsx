@@ -24,66 +24,52 @@ const Introduction = () => {
 
       {/* Background cinematic overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#6A1E0A] via-[#5A1B0A] to-[#3A0D05] opacity-95" />
-      <AnimatedContent
-        distance={50}
-        direction="horizontal"
-        reverse={false}
-        duration={0.8}
-        initialOpacity={0}
-        animateOpacity
-        scale={1}
-        threshold={0.1}
-        delay={1.2}
+      {/* clouds elements */}
+      <motion.div
+        initial={{ opacity: 0, x: -30 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1.5, delay: 0.8, ease: "easeOut" }}
+        className="fixed md:block hidden top-10 right-20 z-10"
       >
         <Image
           src="/assets/cloud-ilustrasi.png"
-          alt=""
-          width={320}
-          height={320}
-          className="w-20 h-auto ml-20 fixed mt-5 translate-x-32 rotate-y-180 hidden md:block"
+          alt="cloud"
+          width={200}
+          height={200}
+          className="w-20 h-auto rotate-y-180 opacity-90"
         />
-      </AnimatedContent>
+      </motion.div>
 
-      <AnimatedContent
-        distance={50}
-        direction="horizontal"
-        reverse={false}
-        duration={0.8}
-        initialOpacity={0}
-        animateOpacity
-        scale={1}
-        threshold={0.1}
-        delay={0.8}
+      <motion.div
+        initial={{ opacity: 0, x: 30 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1.5, delay: 1, ease: "easeOut" }}
+        className="fixed md:block hidden top-5 ml-32 left-0 z-10"
       >
         <Image
           src="/assets/cloud-ilustrasi.png"
-          alt=""
-          width={320}
-          height={320}
-          className="w-20 h-auto right-80 fixed mt-20 translate-x-32 rotate-y-180 hidden md:block"
+          alt="cloud"
+          width={200}
+          height={200}
+          className="w-20 h-auto opacity-90"
         />
-      </AnimatedContent>
+      </motion.div>
 
-      <AnimatedContent
-        distance={50}
-        direction="horizontal"
-        reverse={true}
-        duration={0.8}
-        initialOpacity={0}
-        animateOpacity
-        scale={1}
-        threshold={0.1}
-        delay={1}
+      <motion.div
+        initial={{ opacity: 0, x: 30 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1.5, delay: 1, ease: "easeOut" }}
+        className="fixed md:block hidden top-20 ml-32 left-32 z-10"
       >
         <Image
           src="/assets/cloud-ilustrasi.png"
-          alt=""
-          width={320}
-          height={320}
-          className="w-20 h-auto left-0 fixed mt-5 translate-x-32 hidden md:block"
+          alt="cloud"
+          width={200}
+          height={200}
+          className="w-20 h-auto opacity-90"
         />
-      </AnimatedContent>
-         
+      </motion.div>
+
       {/* Karakter di tengah bawah */}
       <motion.div
         initial={{ y: 80, opacity: 0 }}

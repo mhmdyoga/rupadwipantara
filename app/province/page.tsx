@@ -16,7 +16,7 @@ import Character from '@/components/Character';
 import AudioManager from '@/components/AudioManager';
 import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Earth } from 'lucide-react';
+import { ArrowDownLeft, Earth } from 'lucide-react';
 
 const Kanit_ = Kanit({
   subsets: ["thai"],
@@ -94,7 +94,7 @@ const Province = () => {
               ease: "easeInOut",
             }}
             className=''>
-            <Image src={"/assets/ondel-ondel.png"} alt='' width={36} height={36} className='fixed cursor-pointer md:w-9 w-6 md:mt-[450px] mt-[162px] md:ml-[255px] ml-20 h-auto hover:-translate-y-3 transition-all' />
+            <Image src={"/assets/ondel-ondel.png"} alt='' width={36} height={36} className='fixed cursor-pointer md:w-9 w-6 md:mt-[450px] mt-[162px] md:ml-[260px] ml-20 h-auto hover:-translate-y-3 transition-all' />
           </motion.div>
         </AnimatedContent>
 
@@ -120,11 +120,12 @@ const Province = () => {
           >
             <Dialog>
               <DialogTrigger>
+                <ArrowDownLeft className='text-white font-bold fixed mt-[420px] ml-[218px] rotate-y-180' />
                 <Image src={"/assets/rumah-leuit.png"} alt='' width={36} height={36} className='fixed cursor-pointer md:w-9 w-6 md:mt-[435px] mt-[162px] md:ml-56 ml-18 h-auto hover:-translate-y-3 transition-all' />
               </DialogTrigger>
               <DialogContent>
                 <DialogHeader>
-                  <DialogTitle className='md:text-center text-left md:text-xl text-sm'>Baduy</DialogTitle>
+                  <DialogTitle className='md:text-center text-left md:text-xl text-sm'>Budaya Baduy</DialogTitle>
                   <DialogDescription className='md:text-center text-left italic md:text-2xl text-lg'>
                     Gunung Ulah dilebur, Lebak ulah dirusak
                   </DialogDescription>
@@ -138,7 +139,7 @@ const Province = () => {
                     pauseDuration={1500}
                     showCursor={true}
                     cursorCharacter="|"
-                    className={`md:w-96 w-80 text-black font-semibold text-sm md:text-lg ${Kanit_.className}`}
+                    className={`md:w-96 w-80 text-black font-semibold text-sm md:text-lg `}
                   />
                 </div>
                 <Button onClick={() => window.location.href = "/province/banten/baduy"} variant={"default"} className='flex flex-row gap-2 item-center w-60 md:ml-52 -ml-1'> <Earth /> Yok Jelajahi</Button>
@@ -182,17 +183,19 @@ const Province = () => {
               </motion.div>
             </DialogTrigger>
 
-            <DialogContent>
+            <DialogContent className='w-[1250px]'>
               <DialogHeader>
                 <DialogTitle>Penjelasan mengenai Provinsi Bali</DialogTitle>
-                <DialogDescription>
+                <div className='flex flex-row-reverse gap-2'>
+                    <DialogDescription>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem
                   consectetur a quia neque dignissimos labore voluptates incidunt, earum
                   aspernatur perferendis, totam commodi maxime natus delectus aliquam,
                   possimus molestiae officia doloremque.
                 </DialogDescription>
                 {/* character */}
-                <Character />
+                <Character/>
+                </div>
 
               </DialogHeader>
             </DialogContent>
