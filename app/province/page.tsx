@@ -94,7 +94,7 @@ const Province = () => {
               ease: "easeInOut",
             }}
             className=''>
-            <Image src={"/assets/ondel-ondel.png"} alt='' width={36} height={36} className='fixed cursor-pointer md:w-9 w-6 md:mt-[450px] mt-[162px] md:ml-[260px] ml-20 h-auto hover:-translate-y-3 transition-all' />
+            <Image src={"/assets/ondel-ondel.png"} alt='' width={36} height={36} className='fixed cursor-pointer md:w-9 w-3 md:mt-[450px] mt-48 md:ml-[260px] ml-[84px] h-auto hover:-translate-y-3 transition-all' />
           </motion.div>
         </AnimatedContent>
 
@@ -120,8 +120,8 @@ const Province = () => {
           >
             <Dialog>
               <DialogTrigger>
-                <ArrowDownLeft className='text-white font-bold fixed mt-[420px] ml-[218px] rotate-y-180' />
-                <Image src={"/assets/rumah-leuit.png"} alt='' width={36} height={36} className='fixed cursor-pointer md:w-9 w-6 md:mt-[435px] mt-[162px] md:ml-56 ml-18 h-auto hover:-translate-y-3 transition-all' />
+                <ArrowDownLeft className='text-white font-bold fixed md:mt-[420px] mt-40 md:ml-[218px] ml-14 rotate-y-180' />
+                <Image src={"/assets/rumah-leuit.png"} alt='' width={36} height={36} className='fixed cursor-pointer md:w-9 w-3 md:mt-[435px] mt-[172px] md:ml-56 ml-18 h-auto hover:-translate-y-3 transition-all' />
               </DialogTrigger>
               <DialogContent>
                 <DialogHeader>

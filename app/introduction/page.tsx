@@ -29,7 +29,7 @@ const Introduction = () => {
         initial={{ opacity: 0, x: -30 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1.5, delay: 0.8, ease: "easeOut" }}
-        className="fixed md:block hidden top-10 right-20 z-10"
+        className="fixed block top-10 md:right-20 right-10 mt-20 md:mt-0 z-10"
       >
         <Image
           src="/assets/cloud-ilustrasi.png"
@@ -44,7 +44,7 @@ const Introduction = () => {
         initial={{ opacity: 0, x: 30 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1.5, delay: 1, ease: "easeOut" }}
-        className="fixed md:block hidden top-5 ml-32 left-0 z-10"
+        className="fixed block top-5 md:ml-32 ml-14 mt-20 md:mt-0 left-0 z-10"
       >
         <Image
           src="/assets/cloud-ilustrasi.png"
@@ -58,8 +58,8 @@ const Introduction = () => {
       <motion.div
         initial={{ opacity: 0, x: 30 }}
         animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 1.5, delay: 1, ease: "easeOut" }}
-        className="fixed md:block hidden top-20 ml-32 left-32 z-10"
+        transition={{ duration: 1.5, delay: 1.3, ease: "easeOut" }}
+        className="fixed block top-20 md:ml-32 left-20 -mt-10 md:mt-0 z-10"
       >
         <Image
           src="/assets/cloud-ilustrasi.png"
