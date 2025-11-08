@@ -20,10 +20,14 @@ const Introduction = () => {
   }, []);
 
   return (
-    <div className="flex flex-col top-0 absolute items-center justify-center w-full h-screen overflow-hidden bg-[#6A1E0A] text-white">
+    <div style={{ backgroundImage: "url('/bg-batik.png')",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+  }} className="flex flex-col top-0 absolute items-center justify-center w-full h-screen overflow-hidden text-white">
 
       {/* Background cinematic overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#6A1E0A] via-[#5A1B0A] to-[#3A0D05] opacity-95" />
+      {/* <div className="absolute inset-0 bg-gradient-to-b from-[#6A1E0A] via-[#5A1B0A] to-[#3A0D05] opacity-95" /> */}
       {/* clouds elements */}
       <motion.div
         initial={{ opacity: 0, x: -30 }}
@@ -79,7 +83,6 @@ const Introduction = () => {
       >
         <Character />
       </motion.div>
-
       {/* Dialog Box */}
       <motion.div
         initial={{ y: 100, opacity: 0 }}
