@@ -74,7 +74,7 @@ const Province = () => {
         </AnimatedContent>
 
 
-        {/* banten-jakarta (ondel-ondel) */}
+        {/* jakarta (ondel-ondel) */}
         <AnimatedContent
           distance={150}
           direction="vertical"
@@ -118,32 +118,74 @@ const Province = () => {
               ease: "easeInOut",
             }}
           >
-            <Dialog>
+            <Dialog >
               <DialogTrigger>
                 <ArrowDownLeft className='text-white font-bold fixed md:mt-[420px] mt-40 md:ml-[218px] ml-14 rotate-y-180' />
                 <Image src={"/assets/rumah-leuit.png"} alt='' width={36} height={36} className='fixed cursor-pointer md:w-9 w-3 md:mt-[435px] mt-[172px] md:ml-56 ml-18 h-auto hover:-translate-y-3 transition-all' />
               </DialogTrigger>
-              <DialogContent>
-                <DialogHeader>
-                  <DialogTitle className='md:text-center text-left md:text-xl text-sm'>Budaya Baduy</DialogTitle>
-                  <DialogDescription className='md:text-center text-left italic md:text-2xl text-lg'>
+              
+              <DialogContent className="md:w-[1000px] max-w-none bg-transparent border-0 shadow-none flex flex-col items-center justify-center font-serif">
+              <div className="relative inset-0 bg-gradient-to-t w-[1000px] from-black/40 via-transparent to-black/50 pointer-events-none rounded-xl" />
+                
+                {/* Header */}
+                <DialogHeader className="z-10">
+                  <DialogTitle className="md:text-center text-left md:text-xl text-sm text-[#F2E4C9] drop-shadow-[0_2px_2px_rgba(0,0,0,0.5)]">
+                    Budaya Baduy
+                  </DialogTitle>
+                  <DialogDescription className="md:text-center text-left italic md:text-2xl text-lg text-[#E6D3B1] drop-shadow-[0_2px_2px_rgba(0,0,0,0.5)]">
                     Gunung Ulah dilebur, Lebak ulah dirusak
                   </DialogDescription>
                 </DialogHeader>
+
+                {/* Audio */}
                 {isReady && <AudioManager src="/audio/pembuka_baduy.mp3" />}
-                <div className='flex md:flex-row flex-col md:gap-4 gap-2 items-center'>
-                  <Image src={"/assets/MYCA.png"} alt='' width={200} height={350} className='w-auto h-[150px]' />
-                  <TextType
-                    text={["Baduy merupakan salah satu suku di pedalaman Banten, yang jauh dari modernitas dan teguh menjaga tradisi leluhur."]}
-                    typingSpeed={45}
-                    pauseDuration={1500}
-                    showCursor={true}
-                    cursorCharacter="|"
-                    className={`md:w-96 w-80 text-black font-semibold text-sm md:text-lg `}
+
+                {/* Dialog Content */}
+                <div className="relative flex md:flex-row flex-col items-start justify-center gap-2 md:gap-4 mt-4">
+                  {/* Character */}
+                  <Image
+                    src="/assets/MEYCA.png"
+                    alt="Meyca"
+                    width={200}
+                    height={350}
+                    className="w-auto h-[150px] md:h-[400px] md:-ml-10 -ml-2 z-10"
                   />
+
+                  {/* Text Box */}
+                  <div className="relative bg-[#F2E4C9]/95 text-[#2A1E1E] rounded-2xl mt-20 border border-[#d9c2a4] shadow-[0_4px_15px_rgba(0,0,0,0.25)] p-4 md:p-6 md:w-[720px] w-[90%]">
+                    {/* Character Name */}
+                    <p className="font-bold text-center text-lg border-b border-[#d8b98f] pb-1 mb-3">
+                      Meyca
+                    </p>
+
+                    {/* Dialog Text */}
+                    <TextType
+                      text={[
+                        "Baduy merupakan salah satu suku di pedalaman Banten, yang jauh dari modernitas dan teguh menjaga tradisi leluhur.",
+                      ]}
+                      typingSpeed={45}
+                      pauseDuration={1500}
+                      showCursor={true}
+                      cursorCharacter="|"
+                      className="text-sm md:text-lg font-medium leading-relaxed"
+                    />
+
+                    {/* Pointer (segitiga ke kiri) */}
+                    <div className="absolute -left-3 bottom-8 w-0 h-0 border-t-10 border-b-10 border-r-15 border-t-transparent border-b-transparent border-r-[#F2E4C9]/95" />
+                  </div>
                 </div>
-                <Button onClick={() => window.location.href = "/province/banten/baduy"} variant={"default"} className='flex flex-row gap-2 item-center w-60 md:ml-52 -ml-1'> <Earth /> Yok Jelajahi</Button>
+
+                {/* Button */}
+                <Button
+                  onClick={() => (window.location.href = "/province/banten/baduy")}
+                  variant="default"
+                  className="flex flex-row gap-2 items-center md:-mt-28 ml-96   w-60 bg-[#2A1E1E] text-[#F2E4C9] hover:bg-[#3b2b1a] border border-[#cdb89c]"
+                >
+                  <Earth className="w-5 h-5" /> Yok Jelajahi
+                </Button>
+
               </DialogContent>
+
             </Dialog>
           </motion.div>
         </AnimatedContent>
@@ -187,14 +229,14 @@ const Province = () => {
               <DialogHeader>
                 <DialogTitle>Penjelasan mengenai Provinsi Bali</DialogTitle>
                 <div className='flex flex-row-reverse gap-2'>
-                    <DialogDescription>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem
-                  consectetur a quia neque dignissimos labore voluptates incidunt, earum
-                  aspernatur perferendis, totam commodi maxime natus delectus aliquam,
-                  possimus molestiae officia doloremque.
-                </DialogDescription>
-                {/* character */}
-                <Character/>
+                  <DialogDescription>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem
+                    consectetur a quia neque dignissimos labore voluptates incidunt, earum
+                    aspernatur perferendis, totam commodi maxime natus delectus aliquam,
+                    possimus molestiae officia doloremque.
+                  </DialogDescription>
+                  {/* character */}
+                  <Character />
                 </div>
 
               </DialogHeader>
@@ -260,21 +302,13 @@ const Province = () => {
 
       {/* title */}
       <div className='flex flex-col gap-2 '>
-        {/* icon province */}
-        <div className='md:flex md:flex-row md:gap-3 md:items-center hidden'>
-
-          <Image src="/assets/loc-province.png" alt='' width={36} height={36} className='w-6 h-auto -mt-32 -ml-[750px] fixed ' />
-
-          <p className={`${Kanit_.className} fixed -mt-32 text-xl text-white font-bold -ml-[720px]`}>Provinsi</p>
-
-        </div>
         <TextType
           text={["Indonesia"]}
           typingSpeed={75}
           pauseDuration={1500}
           showCursor={true}
           cursorCharacter="|"
-          className={`font-extrabold text-white md:text-9xl text-7xl md:-ml-[750px] -ml-1 md:-mt-10 -mt-32 ${Kanit_.className}`}
+          className={`font-extrabold text-white md:text-9xl text-7xl md:-ml-[750px] -ml-1 md:-mt-20 -mt-32 ${Kanit_.className}`}
         />
       </div>
     </div>

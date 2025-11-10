@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import AnimatedContent from "../AnimatedContent";
 import TextType from "../TextType";
 import { Button } from "../ui/button";
-import { EarthIcon } from "lucide-react";
+import { Book, EarthIcon } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -21,6 +21,13 @@ const SplashScreen = () => {
 
   return (
     <div className="relative flex flex-col items-center justify-center w-full h-screen bg-[#76250E] overflow-hidden text-white">
+      <div className="flex flex-row items-center">
+         <div className="p-2 bg-white fixed w-10 h-10 right-32 top-5 rounded-full flex flex-row gap-2 items-center justify-center">
+        <Book className="text-[#76250E] w-6 h-auto"/>
+      </div>
+      <span className="text-white fixed right-16 top-6 font-bold">Tutorial</span>
+      </div>
+     
       <AnimatePresence>
         {!isExiting && (
           <motion.div
