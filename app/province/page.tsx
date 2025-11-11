@@ -179,7 +179,7 @@ const Province = () => {
                 <Button
                   onClick={() => (window.location.href = "/province/banten/baduy")}
                   variant="default"
-                  className="flex flex-row gap-2 items-center md:-mt-28 ml-96   w-60 bg-[#2A1E1E] text-[#F2E4C9] hover:bg-[#3b2b1a] border border-[#cdb89c]"
+                  className="flex flex-row gap-2 z-50 items-center md:-mt-28 ml-96   w-60 bg-[#2A1E1E] text-[#F2E4C9] hover:bg-[#3b2b1a] border border-[#cdb89c]"
                 >
                   <Earth className="w-5 h-5" /> Yok Jelajahi
                 </Button>
