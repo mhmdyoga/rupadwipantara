@@ -94,7 +94,7 @@ const Introduction = () => {
       >
         {ready && <AudioManager src="/audio/Pembuka_Meyca.mp3" />}
 
-        <h2 className="font-semibold text-base md:text-lg md:text-black text-white drop-shadow-md leading-relaxed">
+        <h2 className="font-semibold text-base md:text-lg text-white drop-shadow-md leading-relaxed">
           <TextType
             text={[
               "Indonesia terdiri dari ratusan warisan budaya yang tersebar di seluruh pulau dan harus kita lestarikan.",
