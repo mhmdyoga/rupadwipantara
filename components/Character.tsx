@@ -1,15 +1,16 @@
 "use client";
 
+import Image from "next/image";
+
 const Character = () => {
     return (
         <div className="flex items-center justify-center">
-            <video
-                src={"/assets/character.mp4"}
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="rounded-2xl shadow-lg w-[80%] h-auto object-cover"
+            <Image
+                src={"/assets/default_charachter.png"}
+                alt=""
+                className="w-auto h-auto"
+                width={400}
+                height={400}
             />
         </div>
     )
