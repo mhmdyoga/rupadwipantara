@@ -10,6 +10,8 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
+
+
 const Introduction = () => {
   const [ready, setIsReady] = useState(false);
   const router = useRouter();

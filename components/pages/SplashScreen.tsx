@@ -2,11 +2,52 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import AnimatedContent from "../AnimatedContent";
-import TextType from "../TextType";
 import { Button } from "../ui/button";
 import { Book, EarthIcon } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+
+const DataCarousel = [
+  {
+    id: 1,
+    image: "/carousel/spalsh-ttutor.png"
+  },
+  {
+    id: 2,
+    image: "/carousel/introduction-tutor.png"
+  },
+  {
+    id: 3,
+    image: "/carousel/provinsi-tutor.png"
+  },
+  {
+    id: 4,
+    image: "/carousel/detail-province-tutor.png"
+  },
+  {
+    id: 5,
+    image: "/carousel/point-tutor.png"
+  }
+]
+
+type Carousel = {
+id: number,
+image: string,
+}
 
 const SplashScreen = () => {
   const router = useRouter();
@@ -21,13 +62,44 @@ const SplashScreen = () => {
 
   return (
     <div className="relative flex flex-col items-center justify-center w-full h-screen bg-[#76250E] overflow-hidden text-white">
-      <div className="flex flex-row items-center">
-         <div className="p-2 bg-white fixed w-10 h-10 right-32 top-5 rounded-full flex flex-row gap-2 items-center justify-center">
-        <Book className="text-[#76250E] w-6 h-auto"/>
+     <Dialog>
+  <DialogTrigger>
+    <div className="flex flex-row items-center cursor-pointer">
+      <div className="p-2 bg-white fixed w-10 h-10 right-32 top-5 rounded-full flex flex-row gap-2 items-center justify-center">
+        <Book className="text-[#76250E] w-6 h-auto" />
       </div>
-      <span className="text-white fixed right-16 top-6 font-bold">Tutorial</span>
-      </div>
-     
+      <span className="text-white fixed right-16 top-6 font-bold">
+        Tutorial
+      </span>
+    </div>
+  </DialogTrigger>
+
+  <DialogContent>
+    <DialogHeader>
+      <DialogTitle>Buku Panduan Loka Rupa</DialogTitle>
+    </DialogHeader>
+
+    <Carousel>
+      <CarouselContent>
+        {DataCarousel.map((item: Carousel) => (
+          <CarouselItem key={item.id}>
+            <div className="flex justify-center cursor-grab">
+              <Image
+                src={item.image}
+                alt=""
+                width={800}
+                height={800}
+                className="w-auto h-auto"
+              />
+            </div>
+          </CarouselItem>
+        ))}
+      </CarouselContent>
+    </Carousel>
+  </DialogContent>
+</Dialog>
+
+
       <AnimatePresence>
         {!isExiting && (
           <motion.div
@@ -192,7 +264,8 @@ const SplashScreen = () => {
                     LOKARUPA
                   </h2>
                   <span className="font-bold text-sm md:text-xl lg:text-2xl w-80 md:w-full">
-                    gerbang yang akan membawa kalian menyelami sejarah budaya Indonesia
+                    gerbang yang akan membawa kalian menyelami sejarah budaya
+                    Indonesia
                   </span>
                   <Button
                     variant={"outline"}
