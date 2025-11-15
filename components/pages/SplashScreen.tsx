@@ -17,8 +17,6 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
 } from "@/components/ui/carousel";
 
 const DataCarousel = [
@@ -63,7 +61,7 @@ const SplashScreen = () => {
   return (
     <div className="relative flex flex-col items-center justify-center w-full h-screen bg-[#76250E] overflow-hidden text-white">
      <Dialog>
-  <DialogTrigger>
+  <DialogTrigger className="z-50">
     <div className="flex flex-row items-center cursor-pointer">
       <div className="p-2 bg-white fixed w-10 h-10 right-32 top-5 rounded-full flex flex-row gap-2 items-center justify-center">
         <Book className="text-[#76250E] w-6 h-auto" />
